@@ -1,1 +1,12 @@
 /* TODO: Make it awesome */
+th {
+  padding: 20px;
+  color: black;
+  }
+
+td {
+padding: 20px;
+color: black;
+align-content: center;
+text-align: center;
+}

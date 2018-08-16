@@ -15,7 +15,8 @@ function loadCart() {
   var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
   
   //cart variable set on line(10) gets assigned the instance of Cart with the internal properties of cartItems --which is an Array
-  cart = new Cart(cartItems);
+  //cart = new Cart(cartItems);
+  cart = ['apple','apple','apple'];
 }
 
 // Make magic happen --- re-pull the Cart, clear out the screen and re-draw it
@@ -34,32 +35,32 @@ function showCart() {
   // TODO: Find the table body --- pulling in the first index of tbody  
   var tableBody = document.getElementsByTagName('tbody')[0];    
   // TODO: Iterate over the items in the cart
-  // for(var i = 0; i < cart.length; i++){
-    // TODO: Create a TR
+  for(var i = 0; i < cart.length; i++){
+    //TODO: Create a TR
     var cartItemRow = document.createElement('tr'); // creating a tr	within tbody 
     // TODO: Create a TD for the delete link, quantity,  and the item
     
-    // for(var i = 0; i < 3; i++){
-  
+    //for(var j = 0; j < 2; j++){  
     //delete link td - this should be pulling in the delete button already created
     var deleteLink = document.createElement('td'); // creating a td within the tr 
     deleteLink.textContent = 'X';
- 
+
     //quantity td - this should be pulling in the 
     var quanityOfItem = document.createElement('td'); // creating a td within the tr 
     quanityOfItem.textContent = '2';
- 
+
     //item td -- which should be the img pathway to display the image 
     var itemPathWay = document.createElement('td'); // creating a tdwithin the tr that has the remove
     itemPathWay.textContent = 'IMG';
-  // }
 
-  // TODO: Add the TR to the TBODY and each of the TD's to the TR
-  cartItemRow.appendChild(deleteLink);
-  cartItemRow.appendChild(quanityOfItem);
-  cartItemRow.appendChild(itemPathWay);
-  
-  tableBody.appendChild(cartItemRow);		    
+    cartItemRow.appendChild(deleteLink);
+    cartItemRow.appendChild(quanityOfItem);
+    cartItemRow.appendChild(itemPathWay);    
+  //}
+
+    // TODO: Add the TR to the TBODY and each of the TD's to the TR
+    tableBody.appendChild(cartItemRow);		    
+  }
 }
 
 function removeItemFromCart(event) {
