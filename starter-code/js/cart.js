@@ -52,11 +52,11 @@ function showCart() {
     //item td -- which should be the img pathway to display the image 
     var itemPathWay = document.createElement('td'); // creating a tdwithin the tr that has the remove
     itemPathWay.textContent = 'IMG';
-
-    cartItemRow.appendChild(deleteLink);
+ 
+    cartItemRow.appendChild(deleteLink); 
     cartItemRow.appendChild(quanityOfItem);
-    cartItemRow.appendChild(itemPathWay);    
-  //}
+    cartItemRow.appendChild(itemPathWay);   
+    //}
 
     // TODO: Add the TR to the TBODY and each of the TD's to the TR
     tableBody.appendChild(cartItemRow);		    
