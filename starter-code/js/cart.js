@@ -45,15 +45,20 @@ function showCart() {
     var deleteLink = document.createElement('td'); // creating a td within the tr 
     deleteLink.textContent = 'X';
  
-    // //quantity td - this should be pulling in the 
-    // var quanityOfItem = document.createElement('td'); // creating a td within the tr 
-    
-    // //item td -- which should be the img pathway to display the image 
-    // var itemPathAway = document.createElement('td'); // creating a tdwithin the tr that has the remove
+    //quantity td - this should be pulling in the 
+    var quanityOfItem = document.createElement('td'); // creating a td within the tr 
+    quanityOfItem.textContent = '2';
+ 
+    //item td -- which should be the img pathway to display the image 
+    var itemPathWay = document.createElement('td'); // creating a tdwithin the tr that has the remove
+    itemPathWay.textContent = 'IMG';
   // }
 
   // TODO: Add the TR to the TBODY and each of the TD's to the TR
   cartItemRow.appendChild(deleteLink);
+  cartItemRow.appendChild(quanityOfItem);
+  cartItemRow.appendChild(itemPathWay);
+  
   tableBody.appendChild(cartItemRow);		    
 }
 
