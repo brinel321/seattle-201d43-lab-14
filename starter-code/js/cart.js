@@ -15,8 +15,7 @@ function loadCart() {
   var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
   
   //cart variable set on line(10) gets assigned the instance of Cart with the internal properties of cartItems --which is an Array
-  //cart = new Cart(cartItems);
-  cart = ['apple','apple','apple'];
+  cart = new Cart(cartItems);
 }
 
 // Make magic happen --- re-pull the Cart, clear out the screen and re-draw it
@@ -29,36 +28,35 @@ function renderCart() {
 // TODO: Remove all of the rows (tr) in the cart table (tbody)
 function clearCart() {}
 
-// TODO: Fill in the <tr>'s under the <tbody> for each item in the cart
+// [DONE] TODO: Fill in the <tr>'s under the <tbody> for each item in the cart
 function showCart() {
 
-  // TODO: Find the table body --- pulling in the first index of tbody  
+  // [DONE] TODO: Find the table body --- pulling in the first index of tbody  
   var tableBody = document.getElementsByTagName('tbody')[0];    
-  // TODO: Iterate over the items in the cart
-  for(var i = 0; i < cart.length; i++){
-    //TODO: Create a TR
+  // [DONE] TODO: Iterate over the items in the cart
+  for(var i = 0; i < cart.items.length; i++){
+    //[DONE] TODO: Create a TR
     var cartItemRow = document.createElement('tr'); // creating a tr	within tbody 
-    // TODO: Create a TD for the delete link, quantity,  and the item
+    // [DONE] TODO: Create a TD for the delete link, quantity,  and the item
     
-    //for(var j = 0; j < 2; j++){  
-    //delete link td - this should be pulling in the delete button already created
+    
+    //[INCOMPLETE] delete link td - this should be pulling in the delete button already created
     var deleteLink = document.createElement('td'); // creating a td within the tr 
     deleteLink.textContent = 'X';
 
     //quantity td - this should be pulling in the 
     var quanityOfItem = document.createElement('td'); // creating a td within the tr 
-    quanityOfItem.textContent = '2';
+    quanityOfItem.textContent = cart.items[i].quantity;
 
     //item td -- which should be the img pathway to display the image 
     var itemPathWay = document.createElement('td'); // creating a tdwithin the tr that has the remove
-    itemPathWay.textContent = 'IMG';
+    itemPathWay.textContent = cart.items[i].product;
 
     cartItemRow.appendChild(deleteLink);
     cartItemRow.appendChild(quanityOfItem);
-    cartItemRow.appendChild(itemPathWay);    
-  //}
+    cartItemRow.appendChild(itemPathWay);
 
-    // TODO: Add the TR to the TBODY and each of the TD's to the TR
+    // [DONE] TODO: Add the TR to the TBODY and each of the TD's to the TR
     tableBody.appendChild(cartItemRow);		    
   }
 }
