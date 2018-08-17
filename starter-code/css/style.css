@@ -1,12 +1,55 @@
 /* TODO: Make it awesome */
+
+.card {
+  /* margin: 50px; */
+  padding: 20px;
+  text-align: center;
+
+}
+
 th {
   padding: 20px;
-  color: black;
+  /* color: black; */
   }
 
-td {
-padding: 20px;
-color: black;
+.col-1 {
+display: block;
+margin: 50px;
 align-content: center;
 text-align: center;
+
+}
+
+.cart{
+  display: block;
+  margin: 50px;
+  align-content: center;
+  text-align: center;
+}
+
+
+td {
+width: 30%;
+margin: 50px;
+padding: 20px;
+color: black;
+/* align-content: center;
+text-align: center; */
+}
+
+ul li {
+  display: inline-block;
+  font-size: 1em;
+  padding-bottom: 50px;
+}
+
+header h1 {
+  display: inline-block;
+  font-size: 2em;
+  padding-bottom: 10px;
+}
+
+footer {
+  text-align: center;
+  padding-top: 20px;
 }

@@ -32,6 +32,7 @@ function clearCart() {}
 function showCart() {
 
   // [DONE] TODO: Find the table body --- pulling in the first index of tbody  
+
   var tableBody = document.getElementsByTagName('tbody')[0];    
   // [DONE] TODO: Iterate over the items in the cart
   for(var i = 0; i < cart.items.length; i++){
@@ -50,6 +51,7 @@ function showCart() {
 
     //item td -- which should be the img pathway to display the image 
     var itemPathWay = document.createElement('td'); // creating a tdwithin the tr that has the remove
+
     itemPathWay.textContent = cart.items[i].product;
 
     cartItemRow.appendChild(deleteLink);
@@ -63,6 +65,8 @@ function showCart() {
 
 function removeItemFromCart(event) {
   // TODO: When a delete link is clicked, use cart.removeItem to remove the correct item
+ 
+  
   // TODO: Save the cart back to local storage
   // TODO: Re-draw the cart table
 
