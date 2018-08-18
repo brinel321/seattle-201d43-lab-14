@@ -40,13 +40,13 @@ function clearCart() {
 function showCart() {
 
   // [DONE] TODO: Find the table body --- pulling in the first index of tbody
-  var tableBody = document.getElementsByTagName('tbody')[0];
+  var tableBody = document.querySelector('#cart tbody');
+
   // [DONE] TODO: Iterate over the items in the cart
-  for(var i = 0; i < cart.items.length; i++){
+  for(var i in cart.items){
     //[DONE] TODO: Create a TR
     var cartItemRow = document.createElement('tr'); // creating a tr	within tbody
     // [DONE] TODO: Create a TD for the delete link, quantity,  and the item
-
 
     //[DONE] delete link td - this should be pulling in the delete button already created
     var deleteLink = document.createElement('td'); // creating a td within the tr
@@ -73,7 +73,7 @@ function showCart() {
 
 function removeItemFromCart(event) {
   // [DONE] TODO: When a delete link is clicked, use cart.removeItem to remove the correct item
-  debugger;
+
   if (event.target.classList.contains('remover')) {
     // [DONE] Remove that item from the cart, based on the ID we set when we created the button.
     cart.removeItem(parseInt(event.target.id));
