@@ -42,6 +42,7 @@ function showCart() {
   // [DONE] TODO: Find the table body --- pulling in the first index of tbody
   var tableBody = document.querySelector('#cart tbody');
 
+
   // [DONE] TODO: Iterate over the items in the cart
   for(var i in cart.items){
     //[DONE] TODO: Create a TR
@@ -60,6 +61,7 @@ function showCart() {
 
     //item td -- which should be the img pathway to display the image
     var itemPathWay = document.createElement('td'); // creating a tdwithin the tr that has the remove
+
     itemPathWay.textContent = cart.items[i].product;
 
     cartItemRow.appendChild(deleteLink);
@@ -73,7 +75,6 @@ function showCart() {
 
 function removeItemFromCart(event) {
   // [DONE] TODO: When a delete link is clicked, use cart.removeItem to remove the correct item
-
   if (event.target.classList.contains('remover')) {
     // [DONE] Remove that item from the cart, based on the ID we set when we created the button.
     cart.removeItem(parseInt(event.target.id));
